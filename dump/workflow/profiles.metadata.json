@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"workflow.profiles"},{"v":{"$numberInt":"2"},"unique":true,"key":{"id":{"$numberInt":"1"}},"name":"id_1","ns":"workflow.profiles","background":true}],"uuid":"8d2fa05dd0fd449199b91a3dec489de2"}

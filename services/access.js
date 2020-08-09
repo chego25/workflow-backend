@@ -26,7 +26,7 @@ const PasswordSchema = Joi.object({
 
 const processToken = (token) => {
     return new Promise((resolve, reject) => {
-        JSONWebToken.sign(token, process.env.BCRYPT, { expiresIn: '15m' }, (error, token) => {
+        JSONWebToken.sign(token, process.env.BCRYPT, { expiresIn: process.env.TIMEOUT }, (error, token) => {
             error ? reject(error) : resolve(token)
         })
     })

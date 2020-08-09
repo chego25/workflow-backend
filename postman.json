@@ -135,7 +135,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IlNXdUk1TilZJEBWWV4yXilEJHUmYyVSeyRlMGdiWndSN0k2NEA9dGRsU1clR3BWSCk2U2l3JHIuczEkOCIsImlhdCI6MTU5Njk1NzYxMywiZXhwIjoxNTk2OTU4NTEzfQ.UDLomlIvxU1XhCjYRXoSQAoei9I04E_aAkXsvpncoFA",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImtleSI6IiVla2VXZkgpSExBb114Y0F1NCxESGpTS2tlLnszUFVtWF9GNSNaflBJNmRIfXReK2EkeVYocHZob3A5UiIsImlhdCI6MTU5Njk4MjAzOCwiZXhwIjoxNTk2OTgyOTM4fQ.2L4tYALDGbfP-FgZMM8S_jdjaQMwuu62krJ3IEYgM9I",
 							"type": "string"
 						}
 					]
@@ -166,7 +166,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6Ik9VNk0tW3hAWjEwK2x9RyZZMn1GbX19NF9vUGs7dV5PS2tSLlRZdlpLbnZ9V3NLYWEsTW5NcDF5KC47RSIsImlhdCI6MTU5Njk2MzQwOSwiZXhwIjoxNTk2OTY0MzA5fQ.N3f6wXL0dr87BHnOQU12eK8cJpIw3J8TbMX7CUhF2dM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IkgsX3ZqYT1rSHJkakR2SW9sYUp9WWJBeWJbTCNNKDl9eGlQWk9WX3IsQUI2QWZraEpmM3lRbUlBX3NRRSIsImlhdCI6MTU5Njk4MTc4MywiZXhwIjoxNTk2OTgyNjgzfQ.2Y1tWR6SdaT4xUZmd6AzdwKslrJfw1DqpBFzmu2M9u4",
 							"type": "string"
 						}
 					]
@@ -205,7 +205,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6Ik9VNk0tW3hAWjEwK2x9RyZZMn1GbX19NF9vUGs7dV5PS2tSLlRZdlpLbnZ9V3NLYWEsTW5NcDF5KC47RSIsImlhdCI6MTU5Njk2MzQwOSwiZXhwIjoxNTk2OTY0MzA5fQ.N3f6wXL0dr87BHnOQU12eK8cJpIw3J8TbMX7CUhF2dM",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImtleSI6IihwZlI4dFc5K2pAYjtLWEk7ITs7MX4yUGdyPSRZcSZeKXlAWzFuRixURicwTXFydC52KT11bysteGl2YyIsImlhdCI6MTU5Njk3MTQ5MSwiZXhwIjoxNTk2OTcyMzkxfQ.m8FVYCQ3PBNFOpAVCHT70Kw1Zut6BMLC66yQPTuQ138",
 							"type": "string"
 						}
 					]
@@ -316,7 +316,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6In1TbmIuank3JVNQXn1EWXt2Jm43J1BiK1B2dl0wZGo0fXRfQTMyJ0dzLnN5R3FaJ2pSMXkmNTs7cFZxLCIsImlhdCI6MTU5Njk2NjAyNiwiZXhwIjoxNTk2OTY2OTI2fQ.k7P8eCK6rJkntlL2Q_ZELcqNfAJxvu55klmts-EymLc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IkgsX3ZqYT1rSHJkakR2SW9sYUp9WWJBeWJbTCNNKDl9eGlQWk9WX3IsQUI2QWZraEpmM3lRbUlBX3NRRSIsImlhdCI6MTU5Njk4MTc4MywiZXhwIjoxNTk2OTgyNjgzfQ.2Y1tWR6SdaT4xUZmd6AzdwKslrJfw1DqpBFzmu2M9u4",
 							"type": "string"
 						}
 					]
@@ -325,7 +325,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"user\": \"ahalder\",\r\n    \"name\": \"Arka Halder\",\r\n    \"role\": 1\r\n}",
+					"raw": "{\r\n    \"user\": \"jdoe\",\r\n    \"name\": \"John Doe\",\r\n    \"role\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -355,7 +355,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6ImQjdU9pdzUydk0jLXBMNX51ZDFeXyZfNVBZQkRvPUdsUW4sfnhFVlVyVScjekpCanc3UX0uZl41bT03ZiIsImlhdCI6MTU5Njk2NTQyMCwiZXhwIjoxNTk2OTY2MzIwfQ.4tnln8xwEGwly1OLAgKw57J5DYwiDs-HewUB0Z3WGyw",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImtleSI6IihwZlI4dFc5K2pAYjtLWEk7ITs7MX4yUGdyPSRZcSZeKXlAWzFuRixURicwTXFydC52KT11bysteGl2YyIsImlhdCI6MTU5Njk3MTQ5MSwiZXhwIjoxNTk2OTcyMzkxfQ.m8FVYCQ3PBNFOpAVCHT70Kw1Zut6BMLC66yQPTuQ138",
 							"type": "string"
 						}
 					]
@@ -402,7 +402,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/user?id=2",
+					"raw": "http://localhost:3000/api/user?id=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -415,7 +415,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "2"
+							"value": "0"
 						}
 					]
 				}
@@ -438,7 +438,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/user?id=2",
+					"raw": "http://localhost:3000/api/user?id=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -451,6 +451,128 @@
 					"query": [
 						{
 							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Workflow API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImtleSI6IiVla2VXZkgpSExBb114Y0F1NCxESGpTS2tlLnszUFVtWF9GNSNaflBJNmRIfXReK2EkeVYocHZob3A5UiIsImlhdCI6MTU5Njk4MjAzOCwiZXhwIjoxNTk2OTgyOTM4fQ.2L4tYALDGbfP-FgZMM8S_jdjaQMwuu62krJ3IEYgM9I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Second Workflow\",\r\n    \"levels\": [\r\n        {\r\n            \"type\": \"Sequential\",\r\n            \"approvals\": [\r\n                {\r\n                    \"user\": 2\r\n                },\r\n                {\r\n                    \"user\": 5\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"type\": \"Anyone\",\r\n            \"approvals\": [\r\n                {\r\n                    \"user\": 5\r\n                },\r\n                {\r\n                    \"user\": 6\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"type\": \"Round Robin\",\r\n            \"approvals\": [\r\n                {\r\n                    \"user\": 3\r\n                },\r\n                {\r\n                    \"user\": 4\r\n                },\r\n                {\r\n                    \"user\": 6\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"workflow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Workflows API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6InNCLlI7aSxtJ3FtJDYmVC09JDd3O0x4OXdvcidyXVlkRSNpfnN-XzlhU0JQdDhuNng9IzZTQS1-bHNUTSIsImlhdCI6MTU5Njk4ODE4MCwiZXhwIjoxNTk2OTg5MDgwfQ.GFDU5Ot7XikGxcsIsBuU0lcbNVN87I4-BOCdx9R52kE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"workflow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Workflow API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUsImtleSI6InNxSlpDQXhId35lS15SeiM5RVlwcENuYyVmKV5XMEA5Mig7SjVneyk7LVd9clhfWi5PbGQhanh1UURiUiIsImlhdCI6MTU5Njk4ODEwMSwiZXhwIjoxNTk2OTg5MDAxfQ.cc6CXh-mIqkPcqrQUqok3hdCXp5rCoj7XoSjHT8Wiqc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"action\": \"Rejected\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/workflow?id=1&level=2&workflow=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"workflow"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "level",
+							"value": "2"
+						},
+						{
+							"key": "workflow",
 							"value": "2"
 						}
 					]
