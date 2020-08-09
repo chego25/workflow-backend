@@ -59,7 +59,7 @@ Router.get('/', async (req, res, next) => {
     finally { next() }
 })
 
-Router.put('/', async (req, res, next) => {
+Router.patch('/', async (req, res, next) => {
     try {
         if (Lodash.isUndefined(res.locals.status)) {
             await User.update(res.locals.profile, res.locals.query, res.locals.body)
