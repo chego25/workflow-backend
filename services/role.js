@@ -32,7 +32,7 @@ module.exports.create = (profile, body) => {
                 session.endSession()
                 resolve()
             }
-            else { throw new HttpError(403, 'Only an Admin can create a new Role.') }
+            else { throw new HttpError(403, 'Only an Administrator can create a new Role.') }
         }
         catch (error) {
             await session.abortTransaction()
@@ -70,7 +70,7 @@ module.exports.read = (profile) => {
                 session.endSession()
                 resolve(roles)
             }
-            else { throw new HttpError(403, 'Only an Admin can request for the Roles list.') }
+            else { throw new HttpError(403, 'Only an Administrator can request for the Roles.') }
         }
         catch (error) {
             await session.abortTransaction()
@@ -90,6 +90,7 @@ module.exports.update = (profile, query, body) => {
             if (Lodash.isEqual(profile.role.id, 0)) {
                 let role = await Role.findOne({ id: parseInt(query.id) }, { _id: 0, __v: 0 }, { session: session })
                 if (Lodash.isNull(role)) { throw new HttpError(404, 'Role with ID: ' + query.id + ' doesn\'t exist.') }
+                else if (Lodash.isEqual(role.id, 0)) { throw new HttpError(403, 'Role: ' + role.name + ' cannot be updated.') }
                 else {
                     role = await Role.findOne({ name: body.name }, { _id: 0, __v: 0 }, { session: session })
                     if (Lodash.isNull(role)) {
@@ -101,7 +102,7 @@ module.exports.update = (profile, query, body) => {
                     else { throw new HttpError(409, 'Role with Name: ' + body.name + ' already exists.') }
                 }
             }
-            else { throw new HttpError(403, 'Only an Admin can update a Role.') }
+            else { throw new HttpError(403, 'Only an Administrator can update a Role.') }
         }
         catch (error) {
             await session.abortTransaction()
@@ -122,6 +123,7 @@ module.exports.delete = (profile, query) => {
             if (Lodash.isEqual(profile.role.id, 0)) {
                 let role = await Role.findOne({ id: parseInt(query.id) }, { _id: 0, __v: 0 }, { session: session })
                 if (Lodash.isNull(role)) { throw new HttpError(404, 'Role with ID: ' + query.id + ' doesn\'t exist.') }
+                else if (Lodash.isEqual(role.id, 0)) { throw new HttpError(403, 'Role: ' + role.name + ' cannot be deleted.') }
                 else {
                     await Role.deleteOne({ id: parseInt(query.id) }, { session: session })
                     await session.commitTransaction()
@@ -129,7 +131,7 @@ module.exports.delete = (profile, query) => {
                     resolve()
                 }
             }
-            else { throw new HttpError(403, 'Only an Admin can delete a Role.') }
+            else { throw new HttpError(403, 'Only an Administrator can delete a Role.') }
         }
         catch (error) {
             await session.abortTransaction()

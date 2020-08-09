@@ -11,24 +11,6 @@ const Role = require('../models/role')
 const Credential = require('../models/credential')
 const Profile = require('../models/profile')
 
-const modifyData = () => {
-    return new Promise(async (resolve, reject) => {
-        const session = await Database.startSession()
-        session.startTransaction()
-        try {
-            
-            await session.commitTransaction()
-            session.endSession()
-            resolve()
-        }
-        catch (error) {
-            await session.abortTransaction()
-            session.endSession()
-            reject(error)
-        }
-    })
-}
-
 const createModel = (model) => {
     return new Promise((resolve, reject) => {
         model.createCollection((error) => error ? reject(error) : resolve())
@@ -43,7 +25,7 @@ const loadDefaults = () => {
         try {
             await createModel(Counter)
             await Counter.insertMany([{
-                user: 1,
+                user: 2,
                 role: 1,
                 workflow: 1
             }], { session: session })
@@ -52,16 +34,23 @@ const loadDefaults = () => {
                 name: 'Admin'
             }], { session: session })
             await Credential.insertMany([{
-                id: 0,
+                id: 1,
                 user: process.env.USER,
                 passwords: [ Bcrypt.hashSync(process.env.PASSWORD, 10) ],
                 sessions: []
             }], { session: session })
-            await Profile.insertMany([{
-                id: 0,
-                name: process.env.NAME,
-                role: 0
-            }], { session: session })
+            await Profile.insertMany([
+                {
+                    id: 0,
+                    name: 'Workflow Bot',
+                    role: 0
+                },
+                {
+                    id: 1,
+                    name: 'Administrator',
+                    role: 0
+                }
+            ], { session: session })
             await session.commitTransaction()
             session.endSession()
             resolve()

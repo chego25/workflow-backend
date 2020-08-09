@@ -16,7 +16,7 @@ const Role = require('../models/role')
 // Validators
 const CreateSchema = Joi.object({
     user: Joi.string().pattern(new RegExp('^[A-Za-z0-9]{4,20}$')).required(),
-    name: Joi.string().pattern(new RegExp('^[A-Za-z\s]{1,100}$')).required(),
+    name: Joi.string().pattern(new RegExp('^[A-Za-z\\s]{1,100}$')).required(),
     role: Joi.number().min(1).required()
 })
 const ReadSchema = Joi.object({
@@ -50,7 +50,7 @@ module.exports.create = (profile, body) => {
                     resolve()
                 }
             }
-            else { throw new HttpError(403, 'Only an Admin can create a new User.') }
+            else { throw new HttpError(403, 'Only an Administrator can create a new User.') }
         }
         catch (error) {
             await session.abortTransaction()
@@ -103,7 +103,7 @@ module.exports.read = (profile, query) => {
                 session.endSession()
                 resolve(users)
             }
-            else { throw new HttpError(403, 'Only an Admin can request for the Users list.') }
+            else { throw new HttpError(403, 'Only an Administrator can request for the Users.') }
         }
         catch (error) {
             await session.abortTransaction()
@@ -125,6 +125,7 @@ module.exports.update = (profile, query, body) => {
             if (Lodash.isEqual(profile.role.id, 0)) {
                 let user = await Profile.findOne({ id: parseInt(query.id) }, { _id: 0, __v: 0 }, { session: session })
                 if (Lodash.isNull(user)) { throw new HttpError(404, 'User with ID: ' + query.id + ' doesn\'t exist.') }
+                else if (Lodash.isEqual(user.role, 0)) { throw new HttpError(403, 'User: ' + user.name + ' cannot be updated.') }
                 else if (!Lodash.isUndefined(body.role)) {
                     let role = await Role.findOne({ id: body.role }, { _id: 0, __v: 0 }, { session: session })
                     if (Lodash.isNull(role)) { throw new HttpError(409, 'Role with ID: ' + body.role + ' doesn\'t exist.') }
@@ -134,7 +135,7 @@ module.exports.update = (profile, query, body) => {
                 session.endSession()
                 resolve()
             }
-            else { throw new HttpError(403, 'Only an Admin can update an User.') }
+            else { throw new HttpError(403, 'Only an Administrator can update an User.') }
         }
         catch (error) {
             await session.abortTransaction()
@@ -155,6 +156,7 @@ module.exports.delete = (profile, query) => {
             if (Lodash.isEqual(profile.role.id, 0)) {
                 let user = await Profile.findOne({ id: parseInt(query.id) }, { _id: 0, __v: 0 }, { session: session })
                 if (Lodash.isNull(user)) { throw new HttpError(404, 'User with ID: ' + query.id + ' doesn\'t exist.') }
+                else if (Lodash.isEqual(user.role, 0)) { throw new HttpError(403, 'User: ' + user.name + ' cannot be deleted.') }
                 else {
                     await Profile.deleteOne({ id: parseInt(query.id) }, { session: session })
                     await Credential.deleteOne({ id: parseInt(query.id) }, { session: session })
@@ -163,7 +165,7 @@ module.exports.delete = (profile, query) => {
                     resolve()
                 }
             }
-            else { throw new HttpError(403, 'Only an Admin can delete an User.') }
+            else { throw new HttpError(403, 'Only an Administrator can delete an User.') }
         }
         catch (error) {
             await session.abortTransaction()
