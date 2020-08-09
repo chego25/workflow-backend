@@ -6,12 +6,12 @@
 	},
 	"item": [
 		{
-			"name": "Webapp Status API",
+			"name": "App Status API",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/webapp/status",
+					"raw": "http://localhost:3000/api/status",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -19,7 +19,6 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"webapp",
 						"status"
 					]
 				}
@@ -135,7 +134,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImtleSI6IiVla2VXZkgpSExBb114Y0F1NCxESGpTS2tlLnszUFVtWF9GNSNaflBJNmRIfXReK2EkeVYocHZob3A5UiIsImlhdCI6MTU5Njk4MjAzOCwiZXhwIjoxNTk2OTgyOTM4fQ.2L4tYALDGbfP-FgZMM8S_jdjaQMwuu62krJ3IEYgM9I",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6In54R09ZSXYhaX5dJHclXzRnbylOVFgpPUFSSXBaan40d29RJl9IXSx2cjctMCQ1b0g0eHVJYV1Vejk2PSIsImlhdCI6MTU5Njk5MTExMywiZXhwIjoxNTk2OTkyMDEzfQ.VYdnmC2d0Bnj4lSDKK4yNiPPSYoAlW-Y3CnaiTaaauA",
 							"type": "string"
 						}
 					]
@@ -166,7 +165,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IkgsX3ZqYT1rSHJkakR2SW9sYUp9WWJBeWJbTCNNKDl9eGlQWk9WX3IsQUI2QWZraEpmM3lRbUlBX3NRRSIsImlhdCI6MTU5Njk4MTc4MywiZXhwIjoxNTk2OTgyNjgzfQ.2Y1tWR6SdaT4xUZmd6AzdwKslrJfw1DqpBFzmu2M9u4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6In54R09ZSXYhaX5dJHclXzRnbylOVFgpPUFSSXBaan40d29RJl9IXSx2cjctMCQ1b0g0eHVJYV1Vejk2PSIsImlhdCI6MTU5Njk5MTExMywiZXhwIjoxNTk2OTkyMDEzfQ.VYdnmC2d0Bnj4lSDKK4yNiPPSYoAlW-Y3CnaiTaaauA",
 							"type": "string"
 						}
 					]
@@ -316,7 +315,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IkgsX3ZqYT1rSHJkakR2SW9sYUp9WWJBeWJbTCNNKDl9eGlQWk9WX3IsQUI2QWZraEpmM3lRbUlBX3NRRSIsImlhdCI6MTU5Njk4MTc4MywiZXhwIjoxNTk2OTgyNjgzfQ.2Y1tWR6SdaT4xUZmd6AzdwKslrJfw1DqpBFzmu2M9u4",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6In54R09ZSXYhaX5dJHclXzRnbylOVFgpPUFSSXBaan40d29RJl9IXSx2cjctMCQ1b0g0eHVJYV1Vejk2PSIsImlhdCI6MTU5Njk5MTExMywiZXhwIjoxNTk2OTkyMDEzfQ.VYdnmC2d0Bnj4lSDKK4yNiPPSYoAlW-Y3CnaiTaaauA",
 							"type": "string"
 						}
 					]

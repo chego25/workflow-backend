@@ -1,13 +1,12 @@
 # README
 ```
-NODE_ENV=development
-PORT=3000
 DB_URL=mongodb+srv://appLink:aKh89tPXfpghFyQ0@workflow-cluster.gacvl.mongodb.net/
 DB_PARAM=?retryWrites=true&w=majority
-USER=admin
-PASSWORD=admin123
 BCRYPT=RNcNiNNUo8kKhVcSj2ACLfbIy2C8hjXacm3w0aVsN5mDSIxNC2P844E30at5
 TIMEOUT=15m
+PORT=3000
+USER=admin
+PASSWORD=admin123
 ```
 
 ```

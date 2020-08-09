@@ -3,7 +3,7 @@ const Express = require('express')
 const Router = Express.Router()
 
 Router.use(require('../middlewares/parse'))
-Router.use('/webapp', require('../middlewares/webapp'))
+Router.use('/status', require('../middlewares/status'))
 Router.use('/access', require('./access/index'))
 Router.use(require('../middlewares/token'))
 Router.use(require('../middlewares/profile'))
