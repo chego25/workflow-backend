@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "f6fb8af7-665f-4f09-8bc3-9665129e5e58",
+		"name": "Workflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Webapp Status API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/webapp/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webapp",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"user\": \"admin\",\r\n\t\"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6Il49Y0hzTmpzSTlbSXpELXVqO1FGfUJuLVR9UzJKOE1pfTkuc3VHQzBdLXVKW3k4MUFWbSQ2VG0zcU9yRiIsImlhdCI6MTU5Njk1NzUzMiwiZXhwIjoxNTk2OTU4NDMyfQ.c8UQDunkIYPGrJqHQQnj-p1FBKyYOHwsZHGSD1_F5LU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/access/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Password API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IlNXdUk1TilZJEBWWV4yXilEJHUmYyVSeyRlMGdiWndSN0k2NEA9dGRsU1clR3BWSCk2U2l3JHIuczEkOCIsImlhdCI6MTU5Njk1NzYxMywiZXhwIjoxNTk2OTU4NTEzfQ.UDLomlIvxU1XhCjYRXoSQAoei9I04E_aAkXsvpncoFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"old\": \"admin123\",\r\n\t\"new\": \"Admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjAsImtleSI6IlNXdUk1TilZJEBWWV4yXilEJHUmYyVSeyRlMGdiWndSN0k2NEA9dGRsU1clR3BWSCk2U2l3JHIuczEkOCIsImlhdCI6MTU5Njk1NzYxMywiZXhwIjoxNTk2OTU4NTEzfQ.UDLomlIvxU1XhCjYRXoSQAoei9I04E_aAkXsvpncoFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/access/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

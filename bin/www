@@ -1,0 +1,38 @@
+const DotEnv = require('dotenv')
+DotEnv.config()
+
+const Initiator = require('../configs/initiator')
+
+Initiator.loadDefaults().then(() => {
+    const App = require('../app')
+    App.set('port', process.env.PORT)
+    const Http = require('http')
+    const Server = Http.createServer(App)
+    Server.on('error', (error) => {
+        if (error.syscall !== 'listen') {
+            throw error
+        }
+        switch (error.code) {
+            case 'EACCES': {
+                console.error('The port ' + process.env.PORT + ' requires elevated privileges.')
+                process.exit(1)
+                break
+            }
+            case 'EADDRINUSE': {
+                console.error('The port ' + process.env.PORT + ' is already in use.')
+                process.exit(1)
+                break
+            }
+            default: {
+                throw error
+            }
+        }
+    })
+    Server.on('listening', () => {
+        console.log('Server is now listening to port ' + process.env.PORT + ' for API requests.\n')
+    })
+    Server.listen(process.env.PORT)
+}).catch((error) => {
+    console.log(error)
+    process.exit(1)
+})
