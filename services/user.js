@@ -27,11 +27,11 @@ const QuerySchema = Joi.object({
     id: Joi.string().pattern(new RegExp('^[0-9]*$')).required()
 })
 const BodySchema = Joi.object({
-    name: Joi.string().pattern(new RegExp('^[A-Za-z\s]{1,100}$')).optional(),
+    name: Joi.string().pattern(new RegExp('^[A-Za-z\\s]{1,100}$')).optional(),
     role: Joi.number().min(1).optional()
 })
 
-module.exports.create = (profile, body) => {
+module.exports.create = (profile, body) => {.6
     return new Promise(async (resolve, reject) => {
         const session = await Database.startSession()
         session.startTransaction()

@@ -19,13 +19,12 @@ const createModel = (model) => {
 
 const loadDefaults = () => {
     return new Promise(async (resolve, reject) => {
-        //await modifyData()
         const session = await Database.startSession()
         session.startTransaction()
         try {
             await createModel(Counter)
             await Counter.insertMany([{
-                user: 2,
+                user: 1,
                 role: 1,
                 workflow: 1
             }], { session: session })
@@ -34,7 +33,7 @@ const loadDefaults = () => {
                 name: 'Admin'
             }], { session: session })
             await Credential.insertMany([{
-                id: 1,
+                id: 0,
                 user: process.env.USER,
                 passwords: [ Bcrypt.hashSync(process.env.PASSWORD, 10) ],
                 sessions: []
@@ -42,11 +41,6 @@ const loadDefaults = () => {
             await Profile.insertMany([
                 {
                     id: 0,
-                    name: 'Workflow Bot',
-                    role: 0
-                },
-                {
-                    id: 1,
                     name: 'Administrator',
                     role: 0
                 }

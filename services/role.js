@@ -15,7 +15,7 @@ const QuerySchema = Joi.object({
     id: Joi.string().pattern(new RegExp('^[0-9]*$')).required()
 })
 const BodySchema = Joi.object({
-    name: Joi.string().pattern(new RegExp('^[A-Za-z0-9\s]*$')).required()
+    name: Joi.string().pattern(new RegExp('^[A-Za-z0-9\\s]*$')).required()
 })
 
 module.exports.create = (profile, body) => {
