@@ -63,7 +63,9 @@ module.exports.login = (body) => {
         catch (error) {
             await session.abortTransaction()
             session.endSession()
-            reject(error)
+            reject(Lodash.isEqual(error.name, 'ValidationError')
+                ? new HttpError(400, 'Server was unable to parse the request parameters.')
+                : error)
         }
     })
 }
@@ -164,7 +166,9 @@ module.exports.password = (header, body) => {
         catch (error) {
             await session.abortTransaction()
             session.endSession()
-            reject(error)
+            reject(Lodash.isEqual(error.name, 'ValidationError')
+                ? new HttpError(400, 'Server was unable to parse the request parameters.')
+                : error)
         }
     })
 }
