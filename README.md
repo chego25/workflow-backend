@@ -46,7 +46,7 @@ PORT=3000
 ```
 8. Execute the command `npm install` to install all the necessary dependencies for the application.
 9. Execute the command `npm run debug` to run the application with `nodemon` or `npm start` to run it with `node` itself.
-10. If your desired port is `3000`, after successful instantiation of the application, the following line should be printed on the **Command Prompt/Terminal**:
+10. If your desired port is `3000`, the following line should be printed on the **Command Prompt/Terminal**  after successful instantiation of the application:
 ```
 Server is now listening to port 3000 for API requests.
 ```
