@@ -48,8 +48,9 @@ PASSWORD=admin123
 PORT=3000
 ```
 8. Execute the command `npm install` to install all the necessary dependencies for the application.
-9. Execute the command `npm run debug` to run the application with `nodemon` or `npm start` to run it with `node` itself. To run the Mocha test script, execute the command `npm test`. The result will be available inside the **mochawesome-report** folder.
+9. Execute the command `npm run debug` to run the application with `nodemon` or `npm start` to run it with `node` itself.
 10. If your desired port is `3000`, the following line should be printed on the **Command Prompt/Terminal**  after successful instantiation of the application:
 ```
 Server is now listening to port 3000 for API requests.
 ```
+11. To run the **Mocha** test script, execute the command `npm test`. The result will be available inside the **mochawesome-report** folder. Please note, **this script automatically deletes the database upon completion**. To hold the status of the database, please comment out the lines `5`, `6`, `7`, `8`, `9`, `10` and `12` in the `5-drop.js` file inside the `test` folder. **To re-run the script after holding the database status, please don't forget to delete the database manually.**

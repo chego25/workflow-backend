@@ -7,5 +7,7 @@ after((done) => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
-    connection.dropDatabase().then(() => { done() })
+    connection.dropDatabase().then(() => {
+        done()
+    })
 })
