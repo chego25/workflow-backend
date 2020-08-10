@@ -34,7 +34,7 @@ mongodb+srv://appLink:aKh89tPXfpghFyQ0@workflow-cluster.gacvl.mongodb.net/workfl
 ```
 
 6. Clone the [Workflow-Backend](https://github.com/chego25/workflow-backend) repository and enter into the **Root** folder from your **Command Prompt/Terminal**.
-7. Create a `.env` file in the **Root** folder with the following content:
+7. Create a `.env` file in the **Root** folder with the following content and replace the **DB_URL** attribute with the **SRV URL** of your **MongoDB Cluster**:
 
 ```
 DB_URL=<SRV_URL_OF_YOUR_DB>

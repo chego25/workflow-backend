@@ -21,7 +21,8 @@
 						"api",
 						"status"
 					]
-				}
+				},
+				"description": "This API responds with Status Code 200 if the server is up and running."
 			},
 			"response": []
 		},
@@ -51,7 +52,8 @@
 						"access",
 						"login"
 					]
-				}
+				},
+				"description": "This API responds with the JSON Web Token after a successful login."
 			},
 			"response": []
 		},
@@ -82,7 +84,8 @@
 						"access",
 						"profile"
 					]
-				}
+				},
+				"description": "This API responds with the Profile of an user, registered in the application."
 			},
 			"response": []
 		},
@@ -122,7 +125,8 @@
 						"access",
 						"password"
 					]
-				}
+				},
+				"description": "This API changes the login password of an user, registered in the application."
 			},
 			"response": []
 		},
@@ -153,7 +157,8 @@
 						"access",
 						"logout"
 					]
-				}
+				},
+				"description": "This API logs out an user from the application and clears the associated session token."
 			},
 			"response": []
 		},
@@ -192,7 +197,8 @@
 						"api",
 						"role"
 					]
-				}
+				},
+				"description": "This API creates a new Role in the application."
 			},
 			"response": []
 		},
@@ -222,7 +228,8 @@
 						"api",
 						"role"
 					]
-				}
+				},
+				"description": "This API retrieves all the Roles in the application."
 			},
 			"response": []
 		},
@@ -267,7 +274,8 @@
 							"value": "1"
 						}
 					]
-				}
+				},
+				"description": "This API updates an existing Role in the application."
 			},
 			"response": []
 		},
@@ -303,7 +311,8 @@
 							"value": "2"
 						}
 					]
-				}
+				},
+				"description": "This API deletes an existing Role in the application."
 			},
 			"response": []
 		},
@@ -342,7 +351,8 @@
 						"api",
 						"user"
 					]
-				}
+				},
+				"description": "This API creates a new User in the application."
 			},
 			"response": []
 		},
@@ -372,7 +382,8 @@
 						"api",
 						"user"
 					]
-				}
+				},
+				"description": "This API retrieves all the Users in the application."
 			},
 			"response": []
 		},
@@ -417,7 +428,8 @@
 							"value": "0"
 						}
 					]
-				}
+				},
+				"description": "This API updates an existing User in the application."
 			},
 			"response": []
 		},
@@ -453,7 +465,8 @@
 							"value": "0"
 						}
 					]
-				}
+				},
+				"description": "This API deletes an existing User in the application."
 			},
 			"response": []
 		},
@@ -492,7 +505,8 @@
 						"api",
 						"workflow"
 					]
-				}
+				},
+				"description": "This API creates a new Workflow in the application."
 			},
 			"response": []
 		},
@@ -522,7 +536,8 @@
 						"api",
 						"workflow"
 					]
-				}
+				},
+				"description": "This API retrieves all the Workflows (for Admin) and associated Workflows (for Manager/Approver) in the application."
 			},
 			"response": []
 		},
@@ -575,7 +590,8 @@
 							"value": "2"
 						}
 					]
-				}
+				},
+				"description": "This API updates an existing Workflow in the application."
 			},
 			"response": []
 		}
