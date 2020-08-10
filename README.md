@@ -1,6 +1,16 @@
-# Workflow Management [Backend Server]
-This is the solution of the Backend Assignment from V-Comply Technologies. Please follow the steps to run the application from your localhost.
-
+# Workflow Management [Backend]
+This is the solution for the **Backend Assignment** from **V-Comply Technologies**. Please follow the steps to run the application from your **Localhost**.
+## List of Libraries/Modules used
+1. [Node.js](https://nodejs.org/en/)
+2. [MongoDB](https://www.mongodb.com/)
+3. [Mongoose](https://mongoosejs.com/)
+4. [Express](https://expressjs.com/)
+5. [Joi](https://hapi.dev/tutorials/validation/?lang=en_US)
+6. [Lodash](https://lodash.com/)
+7. [Moment](https://momentjs.com/)
+8. [Bcrypt.js](https://github.com/dcodeIO/bcrypt.js)
+9. [JWT](https://github.com/auth0/node-jsonwebtoken)
+## Steps to run the Application
 1. Create an account in [MongoDB Atlas](https://account.mongodb.com/account/login).
 2. Create and deploy a free **MongoDB Cluster** in **AWS** with **M0 Sandbox Cluster Tier** and store the **SRV URL** for it.
 3. Create a **Network Access** entry with **IP Address** `0.0.0.0/0` to allow access to all **IP Addresses** to the **MongoDB Cluster** you'll be creating soon. Otherwise, if your network has a static **IP Address**, you can also enter it.
