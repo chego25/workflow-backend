@@ -27,7 +27,7 @@ This repository contains the solution for the **Backend Assignment** from **V-Co
 
 ## Steps to run the Application
 
-1. Create an account in [MongoDB Atlas](https://account.mongodb.com/account/login).
+1. Create an account in [MongoDB Atlas](https://account.mongodb.com/account/login) and login.
 2. Create and deploy a free **MongoDB Cluster** in **AWS** with **M0 Sandbox Cluster Tier** and store the **SRV URL** for it.
 3. Create a **Network Access** entry with **IP Address** `0.0.0.0/0` to allow access to all **IP Addresses** to the **MongoDB Cluster** you've created. Otherwise, if your network has a static **IP Address**, you can also enter it.
 3. Create a **Database Access** entry with your desired **Username/Password** and provide the role **atlasAdmin** to it.
