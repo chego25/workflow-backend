@@ -1,5 +1,8 @@
 # Workflow Management [Backend]
 This is the solution for the **Backend Assignment** from **V-Comply Technologies**.
+
+> **Author:** Arka Halder, **Email:** arkachego25@gmail.com, **Phone:** (+91) 7595 914 914
+
 ## List of Libraries/Modules used
 1. [Node.js](https://nodejs.org/en/)
 2. [MongoDB](https://www.mongodb.com/)
