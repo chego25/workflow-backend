@@ -55,4 +55,4 @@ Server is now listening to port 3000 for API requests.
 ```
 11. To run the **Mocha** test script, execute the command `npm test`. The test result will be available inside the **mochawesome-report** folder.
 
->Please note, **this script automatically deletes the database upon completion**. To hold the status of the database, please comment out the lines `5`, `6`, `7`, `8`, `9`, `10` and `12` in the `5-drop.js` file inside the `test` folder. **To re-run the script after holding the database status, please don't forget to delete the database manually.**
+>**IMPORTANT!!!** The test script automatically deletes the database after execution. To hold the status of the database, please comment out the lines `5`, `6`, `7`, `8`, `9`, `10` and `12` in the `5-drop.js` file inside the `test` folder. **To re-run the script after holding the database status, please don't forget to delete the database manually.**
