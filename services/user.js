@@ -92,6 +92,9 @@ module.exports.read = (profile, query) => {
                         $project: {
                             _id: 0,
                             __v: 0,
+                            login: 0,
+                            logout: 0,
+                            update: 0,
                             'role._id': 0,
                             'role.__v': 0
                         }

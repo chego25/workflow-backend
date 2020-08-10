@@ -15,19 +15,22 @@ This is the solution for the **Backend Assignment** from **V-Comply Technologies
 7. [Moment](https://momentjs.com/)
 8. [Bcrypt.js](https://github.com/dcodeIO/bcrypt.js)
 9. [JWT](https://github.com/auth0/node-jsonwebtoken)
-10. [VSCode](https://code.visualstudio.com/)
-11. [Robo3t](https://robomongo.org/)
-12. [Postman](https://www.postman.com/)
-13. [Fork](https://git-fork.com/)
-14. [Git](https://git-scm.com/)
-15. [Github](https://github.com/)
+10. [Mocha](https://mochajs.org/)
+11. [Chai](https://www.chaijs.com/)
+12. [Mochawesome](https://github.com/adamgruber/mochawesome)
+13. [VSCode](https://code.visualstudio.com/)
+14. [Robo3t](https://robomongo.org/)
+15. [Postman](https://www.postman.com/)
+16. [Fork](https://git-fork.com/)
+17. [Git](https://git-scm.com/)
+18. [Github](https://github.com/)
 
 ## Steps to run the Application
 
 1. Create an account in [MongoDB Atlas](https://account.mongodb.com/account/login).
 2. Create and deploy a free **MongoDB Cluster** in **AWS** with **M0 Sandbox Cluster Tier** and store the **SRV URL** for it.
 3. Create a **Network Access** entry with **IP Address** `0.0.0.0/0` to allow access to all **IP Addresses** to the **MongoDB Cluster** you've created. Otherwise, if your network has a static **IP Address**, you can also enter it.
-3. Create a **Database Access** entry with your desired **Username/Password** and provide the role **readWriteAnyDatabase** to it.
+3. Create a **Database Access** entry with your desired **Username/Password** and provide the role **atlasAdmin** to it.
 4. The name of the **Database** for this application is `workflow`. I have created the **Database Access** entry with Username `appLink` and Password `aKh89tPXfpghFyQ0`. Hence, the **SRV URL** of my cluster looks like this:
 ```
 mongodb+srv://appLink:aKh89tPXfpghFyQ0@workflow-cluster.gacvl.mongodb.net/workflow?retryWrites=true&w=majority

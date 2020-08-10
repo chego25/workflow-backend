@@ -2,6 +2,9 @@ const Express = require('express')
 const Logger = require('morgan')
 const Cors = require('cors')
 const BodyParser = require('body-parser')
+const DotEnv = require('dotenv')
+
+DotEnv.config()
 
 const App = Express()
 App.use(Logger('dev'))
