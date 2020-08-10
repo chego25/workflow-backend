@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "start": "pm2 start runner.config.js",
-        "local": "nodemon ./bin/www"
+        "start": "node ./bin/www",
+        "debug": "nodemon ./bin/www"
     },
     "dependencies": {
         "@hapi/joi": "^16.1.7",
