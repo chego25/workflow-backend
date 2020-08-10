@@ -1,3 +1,6 @@
+const DotEnv = require('dotenv')
+DotEnv.config()
+
 const Initiator = require('../configs/initiator')
 
 Initiator.loadDefaults().then(() => {

@@ -1,3 +1,7 @@
+// Environment
+const DotEnv = require('dotenv')
+DotEnv.config()
+
 // Libraries
 const Chai = require('chai')
 const ChaiHttp = require('chai-http')

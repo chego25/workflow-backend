@@ -41,7 +41,7 @@ mongodb+srv://appLink:aKh89tPXfpghFyQ0@workflow-cluster.gacvl.mongodb.net/workfl
 
 ```
 DB_URL=<SRV_URL_OF_YOUR_DB>
-JWT_KEY=RNcNiNNUo8kKhVcSj2ACLfbIy2C8hjXacm3w0aVsN5mDSIxNC2P844E30at5
+JWT_KEY=sample-jwt-key
 TIMEOUT=15m
 USER=admin
 PASSWORD=admin123
