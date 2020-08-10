@@ -1,5 +1,5 @@
 # Workflow Management [Backend]
-This is the solution for the **Backend Assignment** from **V-Comply Technologies**. Please follow the steps to run the application from your **Localhost**.
+This is the solution for the **Backend Assignment** from **V-Comply Technologies**.
 ## List of Libraries/Modules used
 1. [Node.js](https://nodejs.org/en/)
 2. [MongoDB](https://www.mongodb.com/)
@@ -36,12 +36,4 @@ PORT=3000
 10. If your desired port is `3000`, after successful instantiation of the application, the following line should be printed on the **Command Prompt/Terminal**:
 ```
 Server is now listening to port 3000 for API requests.
-```
-
-```
-mongodump --host atlas-qfpoi6-shard-0/workflow-cluster-shard-00-00.gacvl.mongodb.net:27017,workflow-cluster-shard-00-01.gacvl.mongodb.net:27017,workflow-cluster-shard-00-02.gacvl.mongodb.net:27017 --ssl --username <USERNAME> --password <PASSWORD> --authenticationDatabase admin --db workflow
-```
-
-```
-mongorestore --host atlas-qfpoi6-shard-0/workflow-cluster-shard-00-00.gacvl.mongodb.net:27017,workflow-cluster-shard-00-01.gacvl.mongodb.net:27017,workflow-cluster-shard-00-02.gacvl.mongodb.net:27017 --ssl --username <USERNAME> --password <PASSWORD> --authenticationDatabase admin
 ```
