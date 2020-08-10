@@ -1,6 +1,6 @@
 # Workflow Management [Backend]
 
-This repository holds the solution for the **Backend Assignment** from **V-Comply Technologies**.
+This repository contains the solution for the **Backend Assignment** from **V-Comply Technologies**.
 
 > **Author:** Arka Halder, **Email:** arkachego25@gmail.com, **Phone:** (+91) 7595 914 914
 
@@ -36,8 +36,8 @@ This repository holds the solution for the **Backend Assignment** from **V-Compl
 mongodb+srv://appLink:aKh89tPXfpghFyQ0@workflow-cluster.gacvl.mongodb.net/workflow?retryWrites=true&w=majority
 ```
 
-6. Clone the [Workflow-Backend](https://github.com/chego25/workflow-backend) repository and enter into the **Root** folder from your **Command Prompt/Terminal**.
-7. Create a `.env` file in the **Root** folder with the following content and replace the **DB_URL** attribute with the **SRV URL** of your **MongoDB Cluster**:
+6. Clone the [Workflow-Backend](https://github.com/chego25/workflow-backend) repository and enter into the **Workspace** folder from your **Command Prompt/Terminal**.
+7. Create a `.env` file with the following content and replace the **DB_URL** attribute with the **SRV URL** of your **MongoDB Cluster**:
 
 ```
 DB_URL=<SRV_URL_OF_YOUR_DB>
