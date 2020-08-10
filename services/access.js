@@ -26,7 +26,7 @@ const PasswordSchema = Joi.object({
 
 const processToken = (token) => {
     return new Promise((resolve, reject) => {
-        JSONWebToken.sign(token, process.env.BCRYPT, { expiresIn: process.env.TIMEOUT }, (error, token) => {
+        JSONWebToken.sign(token, process.env.JWT_KEY, { expiresIn: process.env.TIMEOUT }, (error, token) => {
             error ? reject(error) : resolve(token)
         })
     })
@@ -34,7 +34,7 @@ const processToken = (token) => {
 
 const validateToken = (token) => {
     return new Promise((resolve, reject) => {
-        JSONWebToken.verify(token, process.env.BCRYPT, (error, token) => {
+        JSONWebToken.verify(token, process.env.JWT_KEY, (error, token) => {
             error ? reject(error) : resolve(token)
         })
     })
