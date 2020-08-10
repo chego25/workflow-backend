@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"workflow.levels"},{"v":{"$numberInt":"2"},"unique":true,"key":{"id":{"$numberInt":"1"},"workflow":{"$numberInt":"1"}},"name":"id_1_workflow_1","ns":"workflow.levels","background":true}],"uuid":"f44abe2a5dcc4b3dab1a5185457002cd"}
