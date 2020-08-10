@@ -1,9 +1,11 @@
 # Workflow Management [Backend]
+
 This is the solution for the **Backend Assignment** from **V-Comply Technologies**.
 
 > **Author:** Arka Halder, **Email:** arkachego25@gmail.com, **Phone:** (+91) 7595 914 914
 
-## List of Libraries/Modules used
+## List of Used Libraries/Tools
+
 1. [Node.js](https://nodejs.org/en/)
 2. [MongoDB](https://www.mongodb.com/)
 3. [Mongoose](https://mongoosejs.com/)
@@ -13,7 +15,15 @@ This is the solution for the **Backend Assignment** from **V-Comply Technologies
 7. [Moment](https://momentjs.com/)
 8. [Bcrypt.js](https://github.com/dcodeIO/bcrypt.js)
 9. [JWT](https://github.com/auth0/node-jsonwebtoken)
+10. [VSCode](https://code.visualstudio.com/)
+11. [Robo3t](https://robomongo.org/)
+12. [Postman](https://www.postman.com/)
+13. [Fork](https://git-fork.com/)
+14. [Git](https://git-scm.com/)
+15. [Github](https://github.com/)
+
 ## Steps to run the Application
+
 1. Create an account in [MongoDB Atlas](https://account.mongodb.com/account/login).
 2. Create and deploy a free **MongoDB Cluster** in **AWS** with **M0 Sandbox Cluster Tier** and store the **SRV URL** for it.
 3. Create a **Network Access** entry with **IP Address** `0.0.0.0/0` to allow access to all **IP Addresses** to the **MongoDB Cluster** you'll be creating soon. Otherwise, if your network has a static **IP Address**, you can also enter it.
