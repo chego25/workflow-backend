@@ -9,11 +9,8 @@ const Workflow = require('../../services/workflow')
 Router.post('/', async (req, res, next) => {
     try {
         if (Lodash.isUndefined(res.locals.status)) {
-            await Workflow.create(res.locals.profile, res.locals.body)
             res.locals.status = {
-                content: {
-                    message: 'Workflow has been created successfully.'
-                },
+                content: await Workflow.create(res.locals.profile, res.locals.body),
                 code: 201
             }
         }

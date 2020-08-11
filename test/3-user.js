@@ -161,9 +161,9 @@ describe('User Management', () => {
                         response.body[i].should.be.an('object')
                         response.body[i].should.have.all.keys('id', 'name', 'role')
                         response.body[i].id.should.be.a('number')
+                        response.body[i].id.should.be.equal(i)
                         response.body[i].name.should.be.a('string')
                         response.body[i].role.should.be.a('object')
-                        response.body[i].id.should.be.equal(i)
                         response.body[i].role.should.have.all.keys('id', 'name')
                         switch (i) {
                             case 0: {

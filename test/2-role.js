@@ -87,6 +87,25 @@ describe('Role Management', () => {
                         response.body[i].should.be.an('object')
                         response.body[i].should.have.all.keys('text', 'value')
                         response.body[i].text.should.be.a('string')
+                        switch (i) {
+                            case 0: {
+                                response.body[i].text.should.be.equal('Admin')
+                                break
+                            }
+                            case 1: {
+                                response.body[i].text.should.be.equal('Manager')
+                                break
+                            }
+                            case 2: {
+                                response.body[i].text.should.be.equal('Approver')
+                                break
+                            }
+                            case 2: {
+                                response.body[i].text.should.be.equal('Other')
+                                break
+                            }
+                            default: { break }
+                        }
                         response.body[i].value.should.be.a('number')
                         response.body[i].value.should.be.equal(i)
                         switch (i) {

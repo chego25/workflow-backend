@@ -25,12 +25,16 @@ module.exports.create = (profile, body) => {
         try {
             BodySchema.validateAsync(body)
             if (Lodash.isEqual(profile.role.id, 0)) {
-                let counter = await Counter.findOne({}, { _id: 0, __v: 0 }, { session: session })
-                await Role.insertMany([{ id: counter.role, name: body.name }], { session: session })
-                await Counter.updateOne({}, { $inc: { role: 1 } }, { session: session })
-                await session.commitTransaction()
-                session.endSession()
-                resolve()
+                let role = await Role.findOne({ name: body.name }, { _id: 0, __v: 0 }, { session: session })
+                if (Lodash.isNull(role)) {
+                    let counter = await Counter.findOne({}, { _id: 0, __v: 0 }, { session: session })
+                    await Role.insertMany([{ id: counter.role, name: body.name }], { session: session })
+                    await Counter.updateOne({}, { $inc: { role: 1 } }, { session: session })
+                    await session.commitTransaction()
+                    session.endSession()
+                    resolve()
+                }
+                else { throw new HttpError(409, 'Role: ' + role.name + ' already exists.') }
             }
             else { throw new HttpError(403, 'Only an Administrator can create a new Role.') }
         }

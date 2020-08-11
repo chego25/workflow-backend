@@ -41,7 +41,7 @@ const fetchWorkflow = (workflow) => {
                 {
                     $match: {
                         $expr: {
-                            $eq: [ '$id', parseInt(workflow) ]
+                            $eq: [ '$id', workflow ]
                         }
                     }
                 },
@@ -169,19 +169,23 @@ module.exports.create = (profile, body) => {
                 if (!Lodash.isUndefined(body.details)) { workflows[0].details = body.details }
                 let levels = [], approvals = []
                 for (let i = 0; i < body.levels.length; i++) {
-                    levels.push({
-                        id: i + 1,
-                        workflow: counter.workflow,
-                        type: body.levels[i].type
-                    })
-                    for (let j = 0; j < body.levels[i].approvals.length; j++) {
-                        approvals.push({
-                            id: j + 1,
-                            level: i + 1,
+                    let users = Lodash.uniq(Lodash.map(body.levels[i].approvals, (approval) => { return approval.user }))
+                    if (Lodash.isEqual(users.length, body.levels[i].approvals.length)) {
+                        levels.push({
+                            id: i + 1,
                             workflow: counter.workflow,
-                            user: body.levels[i].approvals[j].user
+                            type: body.levels[i].type
                         })
+                        for (let j = 0; j < body.levels[i].approvals.length; j++) {
+                            approvals.push({
+                                id: j + 1,
+                                level: i + 1,
+                                workflow: counter.workflow,
+                                user: body.levels[i].approvals[j].user
+                            })
+                        }
                     }
+                    else { throw new HttpError(409, 'Approvers cannot occur more than once in a Level.') }
                 }
                 await Workflow.insertMany(workflows, { session: session })
                 await Level.insertMany(levels, { session: session })
@@ -189,7 +193,7 @@ module.exports.create = (profile, body) => {
                 await Counter.updateOne({}, { $inc: { workflow: 1 } }, { session: session })
                 await session.commitTransaction()
                 session.endSession()
-                resolve()
+                resolve(await fetchWorkflow(counter.workflow))
             }
         }
         catch (error) {
@@ -381,7 +385,7 @@ module.exports.update = (profile, query, body) => {
         try {
             UpdateSchema.validateAsync(query)
             ActionSchema.validateAsync(body)
-            let workflow = await fetchWorkflow(query.workflow)
+            let workflow = await fetchWorkflow(parseInt(query.workflow))
             if (Lodash.isNull(workflow)) {
                 throw new HttpError(404, 'The Workflow information doesn\'t exist.')
             }
@@ -404,8 +408,15 @@ module.exports.update = (profile, query, body) => {
                         let responses = Lodash.compact(Lodash.map(level.approvals, (approval) => {
                             return approval.action
                         }))
-                        if ((Lodash.isEqual(level.type, 'Anyone') && Lodash.isEqual(responses.length, 0)) || !Lodash.isEqual(level.approvals.length, responses.length)) {
-                            throw new HttpError(406, 'Approvals are yet to be received from the earlier Level.')
+                        if (!Lodash.isEqual(level.approvals.length, responses.length)) {
+                            if (Lodash.isEqual(level.type, 'Anyone')) {
+                                if (Lodash.isEqual(responses.length, 0)) {
+                                    throw new HttpError(406, 'Approvals are yet to be received from the preceeding Level.')
+                                }
+                            }
+                            else {
+                                throw new HttpError(406, 'Approvals are yet to be received from the preceeding Level.')
+                            }
                         }
                     }
                     let level = Lodash.find(workflow.levels, { id: ++id })
@@ -418,7 +429,7 @@ module.exports.update = (profile, query, body) => {
                             if (!Lodash.isEqual(id, 0)) {
                                 let approval = Lodash.find(level.approvals, { id: id })
                                 if (Lodash.isUndefined(approval.action)) {
-                                    throw new HttpError(406, 'The preceeding Approval has not yet been received.')
+                                    throw new HttpError(406, 'Preceeding Approval has not yet been received.')
                                 }
                             }
                             await Approval.updateOne({
@@ -450,7 +461,7 @@ module.exports.update = (profile, query, body) => {
                         }
                         case 'Anyone': {
                             if (Lodash.isEqual(responses.length, 1)) {
-                                throw new HttpError(406, 'Necessary Approval has already been received for this level.')
+                                throw new HttpError(406, 'Approval has already been received for this Level.')
                             }
                             else {
                                 await Approval.updateOne({
@@ -479,7 +490,7 @@ module.exports.update = (profile, query, body) => {
             }
             await session.commitTransaction()
             session.endSession()
-            resolve(await fetchWorkflow(query.workflow))
+            resolve(await fetchWorkflow(parseInt(query.workflow)))
         }
         catch (error) {
             await session.abortTransaction()
